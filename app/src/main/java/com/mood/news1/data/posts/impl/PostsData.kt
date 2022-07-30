@@ -612,4 +612,5 @@ val post5 = Post(
     imageThumbId = R.drawable.post_5_thumb
 )
 
-
+val posts =
+    listOf<Post>(post1, post2, post3)
