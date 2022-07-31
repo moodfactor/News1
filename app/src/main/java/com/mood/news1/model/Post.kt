@@ -1,6 +1,7 @@
 package com.mood.news1.model
 
 import androidx.annotation.DrawableRes
+import com.mood.news1.network.model.NetworkPost
 
 data class Post(
     val id: String,
@@ -12,6 +13,19 @@ data class Post(
     val paragraphs: List<Paragraph> = emptyList(),
     @DrawableRes val imageId: Int,
     @DrawableRes val imageThumbId: Int
+)
+
+fun NetworkPost.asEntity() = Post(
+    id = id,
+    title = title,
+    subtitle = subtitle,
+    url = url,
+    publication = publication,
+    metadata = metadata,
+    paragraphs = paragraphs,
+    imageId = imageId,
+    imageThumbId = imageThumbId
+
 )
 
 data class Metadata(
